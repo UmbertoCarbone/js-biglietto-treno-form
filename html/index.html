@@ -9,46 +9,57 @@
 </head>
 
 <body>
-    <script src="../JS/main.js"></script>
-</body>
-<div class="container">
-    <h1 class="text-center pt-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-    <div class="card">
+    <div class="container">
+        <h1 class="text-center pt-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="card">
 
-        <div class="card-body">
+            <div class="card-body">
 
-            <div class="row">
+                <div class="row">
 
-                <div class="col-4">
-                    <span>Nome Cognome</span>
-                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    <div class="col-4 ">
+                        <span>Nome Cognome</span>
+                        <input id="nomecognome" type="text" class="form-control" placeholder="First name"
+                            aria-label="First name">
+                    </div>
+
+                    <div class="col-4">
+                        <span>Km da percorrere</span>
+                        <input id="kmDaPercorrere" type="number" class="form-control" placeholder="Last name"
+                            aria-label="Last name" required min="1">
+                    </div>
+
+                    <div class="col-4">
+                        <span>fascia eta'</span>
+                        <select class="form-select" id="autoSizingSelect">
+
+                            <option selected>Choose...</option>
+                            <option value="17">Under 18</option>
+                            <option value="66">Over65</option>
+                            <option value="20">18-65</option>
+
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary" id="pressButton">Genera</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                    </div>
+
                 </div>
 
-                <div class="col-4">
-                    <span>Km da percorrere</span>
-                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                <div class="row">
+                    <p>Risultato:
+                        <span id="result"></span>
+                    </p>
                 </div>
-
-                <div class="col-4">
-                    <span>fascia eta'</span>
-                    <select class="form-select" id="autoSizingSelect">
-
-                        <option selected>Choose...</option>
-                        <option value="1">Minorenni</option>
-                        <option value="2">Over65</option>
-
-                    </select>
-                </div>
-                <div class="col-6">
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-                </div>
-                <div class="col-6">
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-                </div>
-
             </div>
         </div>
     </div>
-</div>
+
+
+    <script src="../JS/main.js"></script>
+</body>
 
 </html>
