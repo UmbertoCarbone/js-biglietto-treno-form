@@ -40,17 +40,17 @@ console.log(press_btn)
  */
 
 press_btn.addEventListener('click', () => {
-    console.log('cliccato');
+    /*  console.log('cliccato'); */
 
     const km = Number(kmDaPercorrere.value);
 
-
-
-    // 2 - Chiedere l'età del passeggero
-
     const age = Number(fasciaeta.value);
 
-    console.log(km, age)
+    const carrozza = Math.floor(Math.random() * 9) + 1;
+
+
+    const codiceBiglietto = Math.floor(Math.random() * 99999) + 1;
+
 
 
     let prezzo = km * 0.21
@@ -59,8 +59,8 @@ press_btn.addEventListener('click', () => {
 
 
     // 4 - Calcolare il prezzo con 2 decimali
-    let prezzoArrotondato = (prezzo.toFixed(2));
-    console.log(prezzoArrotondato)
+    /* let prezzoArrotondato = (prezzo.toFixed(2));
+    console.log(prezzoArrotondato) */
 
 
     // 5 - Verificare l'età per applicare eventuali sconti
@@ -80,13 +80,21 @@ press_btn.addEventListener('click', () => {
     } else {
 
         // 8 - Output prezzo con massimo due decimali
-        console.log("prezzo regolare", prezzo);
+        console.log("prezzo regolare", prezzo.toFixed(2));
 
     }
 
+
+    document.getElementById("carrozza").innerText = carrozza;
+
+    document.getElementById("code").innerText = codiceBiglietto;
+
     document.getElementById("result").innerText = prezzo.toFixed(2);
 
+
+
 })
+
 
 
 
