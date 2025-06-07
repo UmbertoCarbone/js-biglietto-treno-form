@@ -20,7 +20,7 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole. */
 
-const nomecognome = document.querySelector("#nomecognome")
+const resultnomecognome = document.querySelector("#nomecognome")
 
 const kmDaPercorrere = document.querySelector("#kmDaPercorrere")
 
@@ -28,10 +28,13 @@ const fasciaeta = document.querySelector("#autoSizingSelect")
 
 const press_btn = document.querySelector("#pressButton");
 
-console.log(nomecognome)
+
+
+console.log(resultnomecognome)
 console.log(kmDaPercorrere)
 console.log(fasciaeta)
 console.log(press_btn)
+
 
 
 
@@ -48,7 +51,6 @@ press_btn.addEventListener('click', () => {
 
     const carrozza = Math.floor(Math.random() * 9) + 1;
 
-
     const codiceBiglietto = Math.floor(Math.random() * 99999) + 1;
 
 
@@ -56,12 +58,6 @@ press_btn.addEventListener('click', () => {
     let prezzo = km * 0.21
     let underAge = 18
     let overAge = 65
-
-
-    // 4 - Calcolare il prezzo con 2 decimali
-    /* let prezzoArrotondato = (prezzo.toFixed(2));
-    console.log(prezzoArrotondato) */
-
 
     // 5 - Verificare l'età per applicare eventuali sconti
     if (age < underAge) {
@@ -79,7 +75,7 @@ press_btn.addEventListener('click', () => {
         console.log("over65", prezzo.toFixed(2));
     } else {
 
-        // 8 - Output prezzo con massimo due decimali
+
         console.log("prezzo regolare", prezzo.toFixed(2));
 
     }
@@ -89,11 +85,14 @@ press_btn.addEventListener('click', () => {
 
     document.getElementById("code").innerText = codiceBiglietto;
 
-    document.getElementById("result").innerText = prezzo.toFixed(2);
+    document.getElementById("result").innerText = (prezzo.toFixed(2) + "€");
+
+    document.getElementById("nomecompleto").innerText = resultnomecognome.value;
 
 
 
 })
+
 
 
 

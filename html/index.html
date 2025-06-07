@@ -16,36 +16,36 @@
 
             <div class="card-body">
 
-                <div class="row">
+                <div class="row ">
 
                     <div class="col-4 ">
                         <p>Nome Cognome</p>
-                        <input id="nomecognome" type="text" class="form-control" placeholder="First name"
-                            aria-label="First name">
+                        <input id="nomecognome" type="text" class="form-control" placeholder="Nome e Cognome..."
+                            aria-label="nomecognome">
                     </div>
 
                     <div class="col-4">
                         <p>Km da percorrere</p>
-                        <input id="kmDaPercorrere" type="number" class="form-control" placeholder="Last name"
-                            aria-label="Last name" required min="1">
+                        <input id="kmDaPercorrere" type="number" class="form-control"
+                            placeholder="Inserisci Km da percorrere" aria-label="Last name" required min="1">
                     </div>
 
                     <div class="col-4">
                         <p>fascia età</p>
+
                         <select class="form-select" id="autoSizingSelect">
-
-                            <option selected>Choose...</option>
-                            <option value="17">Under 18</option>
-                            <option value="66">Over65</option>
+                            <option selected>Scegli l'età</option>
+                            <option value="17">0-17</option>
+                            <option value="66">65+</option>
                             <option value="20">18-65</option>
-
                         </select>
+
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 text-end pt-5">
                         <button type="button" class="btn btn-secondary" id="pressButton">Genera</button>
                     </div>
-                    <div class="col-6">
-                        <button type="button" class="btn btn-secondary">Secondary</button>
+                    <div class="col-6 pt-5">
+                        <button type="button" class="btn btn-secondary">Annulla</button>
                     </div>
 
                 </div>
@@ -68,12 +68,13 @@
 
                 <div class="row">
 
-                    <div class="col-md-3 bg-secondary text-white d-flex align-items-center justify-content-center p-3">
-                        <strong>NOME PASSEGGERO</strong>
+                    <div class="col-md-3  bg-secondary text-white p-3">
+                        <h6>Nome Passeggero</h6>
+                        <h5 id="nomecompleto"></h5>
                     </div>
 
 
-                    <div class="col-md-9">
+                    <div class="col-md-9 p-0">
                         <div class="table-responsive">
                             <table class="table table-bordered text-center align-middle mb-0">
                                 <thead class="table-light">
